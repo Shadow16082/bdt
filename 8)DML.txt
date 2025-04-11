@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+1. INSERT: 
+$ hive 
+Hive Session started. 
+
+hive> 
+hive> CREATE DATABASE College; 
+OK  
+Time taken: 0.389 seconds 
+
+hive> USE College; 
+OK 
+Time taken: 0.12 seconds 
+
+hive> CREATE TABLE Students (RollNo INT,Name STRING,Branch STRING,Age INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE; 
+OK 
+Time taken: 0.751 seconds 
+
+hive> INSERT INTO TABLE Students VALUES (101, 'John Doe', 'CSE', 20); 
+OK 
+Time taken: 0.85 seconds 
+
+hive> INSERT INTO TABLE Students VALUES(102, 'Alice Smith', 'ECE', 21),(103, 'Bob Brown', 'MECH', 22);
+OK 
+Time taken: 1.10 seconds 
+
+
+2. LOAD: 
+1. Prepare a CSV file (students_data.txt) with the following content:
+104,Charlie Wilson,EEE,23 
+105,David Clark,CSE,24 
+2. Move the file to HDFS: $ hdfs dfs -put students_data.txt /user/hive/warehouse/ 
+3. Load the file into the table: 
+hive> LOAD DATA INPATH '/user/hive/warehouse/students_data.txt' INTO TABLE Students; 
+Output: 
+OK 
+Time taken: 0.97 seconds 
+
+Step 6: Retrieve Data from Table (SELECT) 
+hive> SELECT * FROM Students; 
+Output: 
++-------+--------------+-------+-----+ 
+| RollNo | Name        | Branch | Age | 
++-------+--------------+-------+-----+ 
+| 101   | John Doe    | CSE   | 20  | 
+| 102   | Alice Smith | ECE   | 21  | 
+| 103   | Bob Brown   | MECH  | 22  | 
+| 104   | Charlie Wilson | EEE | 23  | 
+| 105   | David Clark | CSE   | 24  | 
++-------+--------------+-------+-----+ 
+Time taken: 0.56 seconds 
