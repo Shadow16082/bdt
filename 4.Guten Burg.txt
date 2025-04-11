@@ -1,0 +1,11 @@
+1. Download gutenberg dataset and paste into gutenbergdata folder 
+   http://www.gutenberg.org/cache/epub/4300/pg4300.txt 
+2. Follow the similar steps as Wordcount MapReduce program 
+3. Open Terminal 
+4. Type the command: 
+    hdfs dfs -mkdir /guteninput 
+5. hdfs dfs -put /home/cloudera/gutenbergdata/pg4300.txt /guteninput/ 
+6. hadoop jar /home/cloudera/Wordcount.jar WordCount /guteninput/pg4300.txt /gutenoutput 
+7. hdfs dfs -cat /gutenoutput/part-r-00000 
+8. You can also use hdfs dfs -cat /gutenoutput/*        
+command instead of step 19 
