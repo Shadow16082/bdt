@@ -1,0 +1,28 @@
+DDL: Data Definition Language  
+1. CREATE 
+2. ALTER 
+3. DROP 
+
+CREATE TABLE 
+Creates a new table and specifies its characteristics.  
+hive> CREATE TABLE Employee (empid INT, empname STRING, empcity STRING); 
+hive> describe Employee; 
+hive> insert into Employee values (200,’Sreedhar’,’Kurnool’); 
+hive> select * from Employee; 
+ALTER TABLE 
+ 
+Alter Table statement is used to alter a table in Hive. 
+ 
+hive> ALTER TABLE Employee RENAME to GPREmployee 
+ 
+hive> desc GPREmployee; 
+ 
+hive> ALTER TABLE GPREmployee ADD COLUMNS (Sal BIGINT); 
+ 
+DROP TABLE 
+ 
+DROP TABLE removes the table in Hive 
+ 
+hive> DROP TABLE GPREmployee; 
+ 
+hive> desc GPREmployee
