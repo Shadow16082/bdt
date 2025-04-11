@@ -1,0 +1,23 @@
+1. DESCRIBE 
+describe operator is used to view the schema of a relation. 
+Usage: DESCRIBE relationname; 
+2. FOREACH 
+   FOREACH operator is used to generate specified data 
+   transformations based on the column data. 
+   Usage:relationname2 = FOREACH relationname1 GENERATE (required columndata); 
+ 
+3. ORDER BY 
+   ORDER BY operator is used to display the contents of a relation in a sorted order based on one or more fields. 
+   Usage:relationname2 = ORDER relationname1 BY (ASC|DESC
+
+1. Open Terminal and type the command: pig 
+2. gprec_data = LOAD 'gprec.txt' using PigStorage(',') as (branchid:int,branch:chararray,strength:int) 
+   Assuming gprec.txt contains data 
+3. DUMP gprec_data; 
+4. DESCRIBE gprec_data; 
+5. foreach_opr = FOREACH gprec_data GENERATE branch,strength; 
+6. DUMP foreach_opr; 
+7. foreach_opr2 = FOREACH gprec_data GENERATE lower(branch); 
+8. DUMP foreach_opr2; 
+9. orderby_opr = ORDER gprec_data BY strength DESC; 
+10. DUMP orderby_opr;
