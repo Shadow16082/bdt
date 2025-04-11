@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 DDL: Data Definition Language  
 1. CREATE 
 2. ALTER 
