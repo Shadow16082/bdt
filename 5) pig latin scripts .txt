@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 1. DESCRIBE 
 describe operator is used to view the schema of a relation. 
 Usage: DESCRIBE relationname; 
