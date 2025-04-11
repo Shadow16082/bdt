@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 1. hadoop version 
 displays the version of hadoop 
 installed in the system 
