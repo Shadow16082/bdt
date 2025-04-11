@@ -1,0 +1,70 @@
+1. hadoop version 
+displays the version of hadoop 
+installed in the system 
+Ex:hadoop version 
+ 
+ 2. hadoop fs -ls / 
+Displays List of Files and Directories 
+in HDFS file Path 
+Ex:hadoop fs -ls / 
+              
+3. hadoop fs –mkdir  
+create a directory on an HDFS 
+environment. 
+EX:hadoop fs -mkdir /user/hadoop/  
+  
+4. hadoop fs –put 
+used to copy files from the local file 
+system to the HDFS filesystem 
+EX: hadoop fs -put sample.txt /user/data/ 
+
+5. hadoop fs –get 
+used to copy files from HDFS file 
+system to the local file system, just 
+the opposite to put command. 
+EX: hadoop fs -get /user/data/sample.txt/workspace/ 
+
+6. hadoop fs -cat URI [URI ...] 
+used for displaying the contents of a 
+file on the console. 
+EX: hadoop fs -cat /user/data/sampletext.txt 
+ 
+7. hadoop fs -cp URI [URI ...] <dest> 
+Copy files from source to destination. 
+This command allows multiple 
+sources as well in which case the 
+destination must be a directory. 
+EX: hadoop fs -cp /user/hadoop/file1 /user/hadoop/file2 
+
+8. hadoop fs -appendToFile <localsrc> ... <dst> 
+Append single src, or multiple srcs 
+from local file system to the 
+destination file system. Also reads 
+input from stdin and appends to 
+destination file system. 
+EX: hadoop fs -appendToFile localfile /user/hadoop/hadoopfile 
+
+9. hadoop fs -df  URI [URI ...] 
+Displays free space
+EX: hadoop dfs -df /user/hadoop/dir1 
+
+10. hadoop fs –help
+EX: hadoop fs –help
+
+11. hadoop fs -touchz URI [URI ...]
+Create a file of zero length. An error 
+is returned if the file exists with non
+zero length 
+EX: hadoop -touchz pathname 
+
+12. hadoop fs -rmdir  URI [URI ...] 
+Delete a directory
+EX: hadoop fs -rmdir /user/hadoop/emptydir
+
+13. hadoop fs -mv URI [URI ...] <dest> 
+Moves files from source to 
+destination. This command allows 
+multiple sources as well in which 
+case the destination needs to be a 
+directory.
+EX: hadoop fs -mv /user/hadoop/file1 /user/hadoop/file2
