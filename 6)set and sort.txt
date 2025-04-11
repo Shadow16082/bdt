@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 Set Operation: UNION 
 UNION operator of Pig Latin is used to merge the content of two relations. 
 To perform UNION operation on two relations, their columns and domains 
