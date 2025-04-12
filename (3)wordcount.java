@@ -63,29 +63,7 @@ public class WordCount
   }
 }
 
- 1. Open cloudera quickstart vm
- 2. open Eclipse application  in cloudera
- 3. select file-->new-->java project
- 4. Give project name , here we gave WordCount3,  Click on Next
- 5. Select Libraries tab and select add external jars
- 6. Select the path :Usr/lib/hadoop
- 7. Click on Client folder and Select all jar files, Click ok
- 8. Click Finish
- 9. WordCount (Rightclick) --> File -->New --> Class
- 10. Give name as per your filename, here I gave as WordCount, Finish
-11. Type or paste java program for wordcount (WordCount.java), Save
-12. Rightclick on WordCount3 --> Export -->Java -->Jar file (wordcount3.jar), Finish
-13. open Terminal and enter the following
-14. cat > /home/cloudera/inputfile2.txt and type in the lines of text
-15. hdfs dfs -mkdir /myinputfolder 
-16. hdfs dfs -put /home/cloudera/inputfile2.txt/myinputfolder/
-17. hdfs dfs -cat /myinputfolder/inputfile2.txt
-    This command is used to display the contents of the file inputfile2.txt
-18. hadoop jar /home/cloudera/wordcount3.jar WordCount /myinputfolder/inputfile2.txt /outputfolder
-    filename ie., .java file, here I gave WordCount.java
-    Wait for the execution to be done by the system
-19. hdfs dfs -cat /outputfolder/part-r-00000
-    displays the frequency of number of words occured in the file  (inputfile2.txt)
-    highlighted text is the contents of the file (inputfile2.txt)
-    currently highlighted text is the output of the wordcount program
+ 1. hdfs dfs -put /home/cloudera/sam1.txt /dir
+ 2. hadoop jar /home/cloudera/hbvewh.jar Class name /dir/textfile /outchaya
+ 3. hdfs dfs -cat /outchaya/part-r-00000
                   ---------------------END-------------------------
